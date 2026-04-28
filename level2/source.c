@@ -7,6 +7,11 @@ void no(void) {
 	exit(1);
 }
 
+void yes(void) {
+	printf("Good job.\n");
+	exit(0);
+}
+
 int main(void) {
 	char input[24];
 	char key[] = "delabere";
@@ -45,11 +50,11 @@ int main(void) {
 	
 	// Compare the strings
 	if (strcmp(pass, key) == 0) {
-		printf("Good job.\n");
-		return 0;
+		yes();
 	} else {
 		no();
 	}
 	
 	return 1;
 }
+
